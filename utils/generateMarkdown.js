@@ -1,6 +1,18 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license === "MIT") {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+  } else if (license === "APACHE 2.0") {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+  } else if (license === "GPL 3.0") {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+  } else if (license === "BSD 3") {
+    return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+  } else {
+    return "";
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -11,12 +23,13 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
+// Credits to University of California, Berkeley.
 function generateMarkdown(data) {
-  console.log(data.toc.split(","));
-  return `# ${data.title}
-
-  ## Javascript - Module 5 Challenge
+  console.log(data);
+  // console.log(data.toc.split(","));
+  return `# ${data.username}
   
+
   ## Table of Contents
   
   - [Description](#description)
@@ -29,30 +42,13 @@ function generateMarkdown(data) {
   
   ## Description
   
-  A work day schedule where the data persists and the user can save anything they would like within each work hour time block. As long as you save through the button whenever a change is made, your data should be saved! Have fun managing your work day!
-  
   ## Technologies
-  
-  - HTML
-  - CSS
-  - Bootstrap
-  - jQuery
-  
+
   ## Deployed Link
   
-  [Deployed Link](https://smandla.github.io/work_day_scheduler/)
-  
   ## Usage
-  
-  ### Website Demo
-  
-  ![alt text](assets/images/demo.gif)
-  
-  ### Code Snippet
-  
-  ![alt text](assets/images/codesnippet1.png)
-  
-  #### Code snippet for the time block creation iteration using jQuery to create tag, add classes, and add some styling based on the block we're currently creating.
+
+
   
   ## User Information
   
@@ -61,11 +57,11 @@ function generateMarkdown(data) {
   
   ## Credits
   
-  Credits to University of California, Berkeley.
+
   
   ## License
   
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ${renderLicenseBadge(data.license)}
   
   ---
   
