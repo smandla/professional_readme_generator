@@ -22,12 +22,23 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+function renderTechnologiesSection(technologies) {
+  // console.log(technologies);
+  let string = "";
+  for (let i in technologies) {
+    //- HTML
+    string += `\n- ${technologies[i]}`;
+  }
+  console.log(string);
+  return string;
+}
+
 // TODO: Create a function to generate markdown for README
 // Credits to University of California, Berkeley.
 function generateMarkdown(data) {
   console.log(data);
   // console.log(data.toc.split(","));
-  return `# ${data.username}
+  return `# ${data.projectName}
   
 
   ## Table of Contents
@@ -42,12 +53,13 @@ function generateMarkdown(data) {
   
   ## Description
   
+  ${data.description}
   ## Technologies
-
+  ${renderTechnologiesSection(data.technologies)}
   ## Deployed Link
-  
+  ${data.deployedLink}
   ## Usage
-
+  ${data.usage} 
 
   
   ## User Information
@@ -57,7 +69,7 @@ function generateMarkdown(data) {
   
   ## Credits
   
-
+${data.credits}
   
   ## License
   

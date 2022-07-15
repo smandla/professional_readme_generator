@@ -19,6 +19,14 @@ const questions = [
     choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
   },
   {
+    type: "checkbox",
+    name: "technologies",
+    message: "What technologies did you use for this project?",
+    choices: ["HTML", "CSS", "JavaScript", "JQuery", "Bootstrap", "Node.js"],
+  },
+  { name: "deployedLink", message: "What's your deployed link?" },
+
+  {
     name: "installation",
     message: "What command should be run to install dependencies?",
     default: "npm i",
