@@ -27,7 +27,7 @@ function renderTechnologiesSection(technologies) {
   let string = "";
   for (let i in technologies) {
     //- HTML
-    string += `\n- ${technologies[i]}`;
+    string += `\n - ${technologies[i]}`;
   }
   console.log(string);
   return string;
@@ -43,33 +43,40 @@ function generateMarkdown(data) {
 
   ## Table of Contents
   
+  ${data.description ? `- [Description](#description)` : ""}
+  ${data.technologies ? `- [Technologies](#technologies)` : ""}
+
+  ${data.deployedLink ? `- [Deployed Link](#link)` : ""}
+
+  ${data.description ? `- [Description](#description)` : ""}
+
   - [Description](#description)
   - [Technologies](#technologies)
   - [Deployed Link](#link)
   - [Usage](#usage)
   - [User Information](#userinformation)
+  
   - [Credits](#credits)
   - [License](#license)
   
   ## Description
-  
   ${data.description}
   ## Technologies
   ${renderTechnologiesSection(data.technologies)}
   ## Deployed Link
-  ${data.deployedLink}
-  ## Usage
-  ${data.usage} 
+  [Deployed Link](${data.deployedLink})
+  ${data.usage ? `## Usage \n ${data.usage}` : ""}
 
-  
   ## User Information
   
-  [LinkedIn](https://www.linkedin.com/in/srikavya-mandla/) |
-  [Portfolio](https://smandla.github.io/kavya_professionalportfolio/)
+  [Email](${data.email})
+  [LinkedIn](${data.linkedin}) |
+  [Portfolio](${data.portfolio}) |
+
   
   ## Credits
   
-${data.credits}
+  ${data.credits}
   
   ## License
   
