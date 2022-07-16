@@ -1,4 +1,4 @@
-# project name
+# sd
   
 
   ## Table of Contents
@@ -15,29 +15,28 @@
   - [Deployed Link](#link)
   - [Usage](#usage)
   - [User Information](#userinformation)
+  
   - [Credits](#credits)
   - [License](#license)
   
   ## Description
-  description
+  sdwedwe
   ## Technologies
   
  - HTML
  - CSS
  - JavaScript
  - JQuery
- - Bootstrap
- - Node.js
   ## Deployed Link
-  [Deployed Link](url@url.com)
+  [Deployed Link](sdcd)
   ## Usage 
- dcd
+ ssc
 
   ## User Information
   
-  [Email](mandla21@ee)
-  [LinkedIn](dcdccd) |
-  [Portfolio](ionolm) |
+  [Email](sd)
+  [LinkedIn](sdsd) |
+  [Portfolio](sds) |
 
   
   ## Credits

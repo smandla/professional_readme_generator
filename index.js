@@ -5,7 +5,10 @@ const fs = require("fs");
 
 // TODO: Create an array of questions for user input
 const questions = [
-  { name: "username", message: "What is your GitHub username?" },
+  {
+    name: "username",
+    message: "What is your GitHub username?",
+  },
   { name: "email", message: "What is your email address?" },
   { name: "projectName", message: "What is your project's name?" },
   {
@@ -46,6 +49,7 @@ const questions = [
   },
   { name: "linkedin", message: "Link your LinkedIn Profile" },
   { name: "portfolio", message: "Link your Portfolio Site" },
+  { name: "gif", message: "add a gif" },
 ];
 
 // TODO: Create a function to write README file
