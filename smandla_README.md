@@ -1,54 +1,49 @@
-# sd
-  
+# sdcsdc
 
-  ## Table of Contents
-  
-  - [Description](#description)
-  - [Technologies](#technologies)
+## Table of Contents
 
-  - [Deployed Link](#link)
+- [Description](#description)
+- [Technologies](#technologies)
+- [Deployed Link](#link)
+- [Usage](#usage)
+- [User Information](#user%20information)
+- [Credits](#credits)
+- [License](#license)
 
-  - [Description](#description)
+## Description
 
-  - [Description](#description)
-  - [Technologies](#technologies)
-  - [Deployed Link](#link)
-  - [Usage](#usage)
-  - [User Information](#userinformation)
-  
-  - [Credits](#credits)
-  - [License](#license)
-  
-  ## Description
-  sdwedwe
-  ## Technologies
-  
- - HTML
- - CSS
- - JavaScript
- - JQuery
-  ## Deployed Link
-  [Deployed Link](sdcd)
-  ## Usage 
- ssc
+sc
 
-  ## User Information
-  
-  [Email](sd)
-  [LinkedIn](sdsd) |
-  [Portfolio](sds) |
+## Technologies
 
-  
-  ## Credits
-  
-  undefined
-  
-  ## License
-  
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  
-  ---
-  
-  © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-  
+CSS,JavaScript,JQuery,Bootstrap,Node.js
 
+## Deployed Link
+
+[Deployed Link](dcsdc)
+
+## Usage
+
+sdcsd
+
+## Usage
+
+![alt text](assets/images/demo.gif)
+
+## User Information
+
+[Email](dscdc) |
+[LinkedIn](sdcsdc) |
+[Portfolio](sdcsdcs)
+
+## Credits
+
+undefined
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
