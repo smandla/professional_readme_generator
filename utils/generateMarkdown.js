@@ -3,45 +3,56 @@
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
-      return `MIT] \n [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
     case "APACHE 2.0":
-      return `APACHE 2.0] \n [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
     case "GPL 3.0":
-      return `GPL 3.0] \n [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
     case "BSD 3":
-      return `BSD 3] \n [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+      return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
     default:
       return "";
   }
 }
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return `[This repo is licensed by ${renderLicenseBadge(license)}`;
+  return `This repo is licensed by ${license} \n`;
 }
 
 function renderTechnologiesSection(technologies) {
   let string = "";
+
   for (let i in technologies) {
     //- HTML
     string += `\n - ${technologies[i]}`;
   }
   return string;
 }
-function renderUsage(usage) {
-  return `./images/${usage}`;
+// function renderUsage(usage) {
+//   return `./images/${usage}`;
+// }
+function renderCode(code) {
+  return "```ruby \n" + code + "\n``` ";
 }
-
 // TODO: Create a function to generate markdown for README
-// Credits to University of California, Berkeley.
 function generateMarkdown(data) {
-  // console.log(data.toc.split(","));
   return `# ${data.projectName}
   
+  ## License
+
+  ${renderLicenseSection(data.license)}
+
+  ${renderLicenseBadge(data.license)}
+
+   
+  ## Description
+  ${data.description}
+
   ## Table of Contents
-  
-  ${data.description ? `- [Description](#description)` : ""}
-  ${data.technologies ? `- [Technologies](#technologies)` : ""}
+  ${data.installation ? `- [Installation](#installation)` : ""}
+  ${data.technologies[0] === undefined ? "" : `- [Technologies](#technologies)`}
   ${data.deployedLink ? `- [Deployed Link](#link)` : ""}
   ${data.usage ? `- [Usage](#usage)` : ""}
   ${
@@ -50,33 +61,58 @@ function generateMarkdown(data) {
       : ""
   }
   ${data.contributions ? `- [Credits](#credits)` : ""}
-  ${data.license ? `- [License](#license)` : ""}
-
-  ## License
+  ${data.tests ? `- [Tests](#tests)` : ""}
+  ${data.email ? `- [Questions](#questions)` : ""}
+  ${
+    data.installation
+      ? `## Installation \n To install necessary dependencies, run the following command: \n
+${renderCode(data.installation)}`
+      : ""
+  }
   
-  ${renderLicenseSection(data.license)}
-  
+  ${
+    data.technologies[0] === undefined
+      ? ""
+      : `## Technologies \n
+  ${renderTechnologiesSection(data.technologies)}`
+  }
+  ${
+    data.deployedLink
+      ? `## Deployed Link
+  [Deployed Link](${data.deployedLink})`
+      : ""
+  }
 
-  ## Description
-  ${data.description}
-  ## Technologies
-  ${renderTechnologiesSection(data.technologies)}
-  ## Deployed Link
-  [Deployed Link](${data.deployedLink})
-  ## Usage 
-  ${data.usage ? `\n ${data.usage}` : ""}
-  ![alt text](${renderUsage(data.gif)})
-
-  ## User Information
-
+  ${data.usage ? `## Usage \n ${data.usage}\n` : ""}
+  ${
+    data.username || data.email || data.linkedin || data.portfolio
+      ? `## User Information \n 
+  [Github](https://github.com/${data.username}) |
   [Email](${data.email}) |
   [LinkedIn](${data.linkedin}) |
-  [Portfolio](${data.portfolio})
+  [Portfolio](${data.portfolio})`
+      : ""
+  }
+  ${
+    data.credits
+      ? `  ## Credits\n
 
+  ${data.credits}`
+      : ""
+  }
   
-  ## Credits
-  
-  ${data.credits}
+  ${
+    data.tests
+      ? `## Tests \n To run tests, run the following command: \n
+${renderCode(data.tests)}`
+      : ""
+  }
+
+  ${
+    data.email
+      ? `## Questions \n If you have any questions about the repo, open an issue or contact me directly at ${data.email}.   `
+      : ""
+  }
   
   ---
   

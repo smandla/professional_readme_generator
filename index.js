@@ -49,12 +49,10 @@ const questions = [
   },
   { name: "linkedin", message: "Link your LinkedIn Profile" },
   { name: "portfolio", message: "Link your Portfolio Site" },
-  { name: "gif", message: "add a gif" },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  // console.log(fileName, data);
   fs.writeFile(`${fileName}_README.md`, data, (err) =>
     err ? console.error(err) : console.log("Success!")
   );
@@ -63,9 +61,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((answers) => {
-    // console.log("Answer", answers);
     const { username } = answers;
-
     writeToFile(username, generateMarkdown(answers));
   });
 }
