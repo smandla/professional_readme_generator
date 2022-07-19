@@ -1,112 +1,75 @@
-# Professional README Generator Starter Code
+# README Generator
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+## License
 
-# 09 Node.js Challenge: Professional README Generator
+This repo is licensed by MIT
 
-## Your Task
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project.
+## Description
 
-You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
+Using Node, user's can generate a custom README.md file for their repositories by answering a series of questions. These questions are related to information that would enhance the understanding of the project/code at first glance. Once the questions have been answered, a separate file with a custom README file name will be generated.
 
-Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](./Good-README-Guide/README.md) as a reminder of everything that a high-quality, professional README should contain.
+## Table of Contents
 
-The application will be invoked by using the following command:
+- [Installation](#installation)
+- [Technologies](#technologies)
+- [Demo Link](#demo%20link)
+- [Usage](#usage)
+- [User Information](#user%20information)
+- [Credits](#credits)
+- [Tests](#tests)
+- [Questions](#questions)
 
-```bash
-node index.js
+## Installation
+
+To install necessary dependencies, run the following command:
+
+```ruby
+npm i
 ```
 
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
+## Technologies
 
-## User Story
+- JavaScript
+- Node.js
 
-```md
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
+## Demo Link
+
+[Demo Link](https://drive.google.com/file/d/1PJVb1jXXlJ6s0m_62LZgnQo743WJozDj/view?usp=sharing)
+
+## Usage
+
+### Terminal View
+
+![alt text](assets/images/terminal_ss.png)
+
+#### Terminal view of questions that are prompted in order for a user to generate a custom README file.
+
+### Generated Sample README
+
+![alt text](assets/images/sample_readme.png)
+
+#### Rendered README.md file for the answers from the terminal view above.
+
+## User Information
+
+[Github](https://github.com/smandla) |
+[Email](mandla21@up.edu) |
+[LinkedIn](https://www.linkedin.com/in/srikavya-mandla/) |
+[Portfolio](https://smandla.github.io/kavya_professionalportfolio/)
+
+## Tests
+
+To run tests, run the following command:
+
+```ruby
+npm test
 ```
 
-## Acceptance Criteria
+## Questions
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
-
-## Getting Started
-
-Here are some guidelines to help you get started:
-
-- Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
-
-- Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
-
-- Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
-
-- Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
-
-## Grading Requirements
-
-This Challenge is graded based on the following criteria:
-
-### Deliverables: 20%
-
-- A sample README generated using the application must be submitted.
-
-- Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-- A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
-
-- The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-- The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-- The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
-
-### Technical Acceptance Criteria: 40%
-
-- Satisfies all of the above acceptance criteria plus the following:
-
-  - Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-### Repository Quality: 13%
-
-- Repository has a unique name.
-
-- Repository follows best practices for file structure and naming conventions.
-
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-- Repository contains multiple descriptive commit messages.
-
-- Repository contains a high-quality README with description and a link to walkthrough video.
-
-## Review
-
-You are required to submit the following for review:
-
-- A walkthrough video demonstrating the functionality of the application.
-
-- A sample README.md file for a project repository generated using your application
-
-- The URL of the GitHub repository, with a unique name and a README describing the project
+If you have any questions about the repo, open an issue or contact me directly at mandla21@up.edu.
 
 ---
 
